@@ -8,6 +8,7 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,24 +19,47 @@
 
     </head>
 
-    <body>
+    <body class="d-flex flex-column min-vh-100">
 
         <div class="container">
 
-            <form action="" class="user-input text-center m-2">
-                <label for="city">Enter Pokemon Name or Number</label>
-                <input type="text" name="city" placeholder="E.g. Charizard" class="form-control p-3 m-1">
+            <!-- Pokemon Logo -->
+            <div class="d-flex justify-content-center">
+                <img src="pokeBanner.png" class="img-fluid" width="250" alt="">
+            </div>
+
+            <!-- User Input -->
+            <form action="" class="user-input text-center">
+                <label for="city">Enter Pokémon Name or Pokedex Number</label>
+                <input type="text" name="pokemon" placeholder="E.g. Charizard" class="form-control p-3 m-1 w-100">
             </form>
 
             <!-- Pokemon Information Card -->
-            <div class="card shadow-lg">
-                
+            <div class="card shadow-lg m-2 w-100 d-none">
+
+                <!-- Displayed Pokemon Info -->
+                <div class="displayed-info text-center"></div>
+
+                <!-- Close Button -->
+                <div class="text-center pt-3 mt-3">
+                    <button type="submit" class="btn close-button border-0"><span class="bi bi-x-square">
+                            Close Pokéball</span></button>
+                </div>
+
             </div>
+
+            <!-- Pokeball -->
+            <div class="box child-to-body mt-3 d-flex justify-content-center">
+                <div class="pokeball">
+                    <div class="pokeball-center"></div>
+                </div>
+            </div>
+
 
 
         </div>
 
-
+        <footer class="text-center mt-auto mb-0">©2022 Pokémon. ©1995 - 2022 Nintendo/Creatures Inc./GAME FREAK inc. TM, ®Nintendo.</footer>
         <script src="app.js"></script>
     </body>
 

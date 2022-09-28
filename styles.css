@@ -8,3 +8,105 @@
     /* Allow adjustment of main container when resizing*/
     max-width: 400px;
 }
+
+.text-muted {
+    font-size: medium;
+}
+
+footer{
+    font-size: small;
+}
+
+
+
+
+
+
+/* ===============   Animated Pokeball (https://github.com/athanstan/css-pokeball)   ===============*/
+.pokeball {
+    /* position: relative; */
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border: 5px solid #000;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset -10px 10px 0 10px #ccc;
+    animation: shake 1.50s cubic-bezier(.36, .07, .19, .97) infinite;
+    animation-play-state: running;
+}
+
+.pokemon-sprite {
+    display: inline-block;
+    width: 200px;
+    animation: shake 1.75s cubic-bezier(.36, .07, .19, .97) infinite;
+    animation-play-state: running;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    20% {
+        transform: translate(-10px, 0) rotate(-20deg);
+    }
+
+    30% {
+        transform: translate(10px, 0) rotate(20deg);
+    }
+
+    50% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+
+    60% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+.pokeball::before,
+.pokeball::after {
+    content: "";
+    position: absolute;
+}
+
+.pokeball::before {
+    background: red;
+    width: 100%;
+    height: 50%;
+}
+
+.pokeball::after {
+    top: calc(50% - 5px);
+    width: 100%;
+    height: 10px;
+    background: #000;
+}
+
+.pokeball-center {
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 4px solid #7f8c8d;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 0 7px black;
+    animation: blink .5s alternate infinite;
+    animation-play-state: paused;
+}
+
+/* .pokeball:hover .pokeball-center {
+    animation-play-state: running;
+} */
+
+/* .pokemon-sprite:hover {
+    animation-play-state: running;
+} */

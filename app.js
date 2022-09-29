@@ -12,8 +12,6 @@ async function pokemonLookup(userInput) {
     //Turn response JSON into a JavaScript object
     const data = await response.json();
 
-    console.log(data);
-
     return data;
 }
 
@@ -28,7 +26,6 @@ userInput.addEventListener('submit', event => {
 
     //Grab the value in the text form field
     const pokemonName = userInput.pokemon.value.toLowerCase();
-    console.log(pokemonName);
 
     //Clear text entry after submission
     userInput.reset();
@@ -41,7 +38,7 @@ userInput.addEventListener('submit', event => {
 
 
 
-/* ======================= Update the UI DOM Details ======================= */
+/* ======================= Update the DOM UI Details ======================= */
 
 const container = document.querySelector('.container');
 const card = document.querySelector('.card');
@@ -58,14 +55,13 @@ const updateUI = data => {
     const pokemonTypes = () => {
         const types = [];
         data.types.forEach(element => {
-            console.log(element);
             types.push(element.type.name);
         });
         return types;
     };
 
 
-    //Display Pokemon Name and Number to DOM
+    //Display Pokemon Name and Pokedex Number to DOM
     displayedInfo.innerHTML =
         `
         <h3 class="mt-3 mb-0">${pokemonName} <span class="text-muted"> ID#${pokedexID}</span></h3>
@@ -81,7 +77,6 @@ const updateUI = data => {
     const spanElements = document.querySelectorAll('.type');
 
     spanElements.forEach(item => {
-        console.log(typeof item.innerHTML);
         switch (item.innerHTML.trim()) {
             case "Normal":
                 item.style.backgroundColor = '#A8A878'

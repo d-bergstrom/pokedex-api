@@ -10,7 +10,7 @@ The focus of this project was to become skilled with Asynchronous JavaScript pro
 ## How It's Made
 **Tech Used:** HTML, CSS, Bootstrap, JavaScript
 
-## Resources Used:  
+**Resources Used:**  
 * Pokemon API: https://pokeapi.co/  
 * Fonts Awesome: https://fontawesome.com/  
 * Animated Pokeball: https://github.com/athanstan/css-pokeball#readme  
